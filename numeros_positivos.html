@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>num posiv</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <p>INGRESA UN NUMERO POSITIVO</p>
+
+    <body>
+        <form>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" placeholder="1.0" min="0">
+            <button type="button" onclick="validarInput()">Validar</button>
+        </form>
+
+        <p id="mensaje"></p>
+
+        <script>
+            function validarInput() {
+                // Obtener el valor del input
+                const cantidad = document.getElementById('cantidad').value;
+
+                // Obtener el elemento para mostrar mensajes
+                const mensaje = document.getElementById('mensaje');
+
+                // Validar si el valor está dentro del rango permitido
+                if (cantidad < 1) {
+                    mensaje.textContent = 'Número inválido, intenta nuevamente.';
+                    mensaje.style.color = 'red';
+                } else {
+                    mensaje.textContent = 'Número aceptado: ' + cantidad;
+                    mensaje.style.color = 'green';
+                }
+            }
+        </script>
+    </body>
+</body>
+
+</html>

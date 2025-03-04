@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        
+        <link rel="stylesheet" href="cssr/style.css">
+</head>
+
+<body>
+
+        <h1>ELIGE UN ALIMENTO DEL MENU</h1>
+        <h2>1. Tacos</h2>
+        <h2>2. Pizza</h2>
+        <h2>3. Ensalada</h2>
+        <h2>4. Hamburguesa</h2>
+
+        <form>
+                <label for="pin:">Ingresa:</label>
+                <input type="text" id="tbId" />
+              
+            </form>
+      
+
+        </br>
+        <div id="msg"></div>
+        </br>
+        <button onClick="buscar()">Buscar</button>
+</body>
+
+<script>
+        // Le damos la constante menu donde asignara un indice a cada opcion.
+        const menu = ["tacos", "pizza", "ensalada", "hamburguesa"];
+
+        //Funcion para buscar en el menu
+        function buscar() {
+                const indice = document.getElementById("tbId").value - 1;
+                if (menu[indice])
+
+                        document.getElementById("msg").innerHTML = "Has seleccionado " + menu[indice];
+                else
+                        document.getElementById("msg").innerHTML = "No Existe";
+
+        }
+</script>
+
+</html>
